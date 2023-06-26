@@ -1,3 +1,6 @@
+// Autor: Niklas Fulle
+
+// checks the horizontal if there is a winner
 int checkHorizontal(char field[3][3]){
     for(int i = 0; i < 3; i++){
         if(field[i][0] == field[i][1] && field[i][1] == field[i][2] && field[i][0] != ' '){
@@ -7,6 +10,7 @@ int checkHorizontal(char field[3][3]){
     return 0;
 }
 
+// checks the vertical if there is a winner
 int checkVertical(char field[3][3]){
     for(int i = 0; i < 3; i++){
         if(field[0][i] == field[1][i] && field[1][i] == field[2][i] && field[0][i] != ' '){
@@ -16,6 +20,7 @@ int checkVertical(char field[3][3]){
     return 0;
 }
 
+// checks the diagonal if there is a winner
 int checkDiagonal(char field[3][3]){
     if(field[0][0] == field[1][1] && field[1][1] == field[2][2] && field[0][0] != ' '){
         return 1;
@@ -26,6 +31,7 @@ int checkDiagonal(char field[3][3]){
     return 0;
 }
 
+// checks if there is a winner
 int checkWinner(char field[3][3], int turn){
     // Check for horizontal win
     int horizontal = checkHorizontal(field);
@@ -44,9 +50,11 @@ int checkWinner(char field[3][3], int turn){
     return 0;
 }
 
+// checks if the input is valid and if the field is already set
 int checkInput(char field[3][3], char input[2]){
+    // check if input is valid
     if(input[0] != 'A' && input[0] != 'B' && input[0] != 'C'){
-                printf("Invalid input\n");
+        printf("Invalid input\n");
         return 1;
     }
     
@@ -65,6 +73,7 @@ int checkInput(char field[3][3], char input[2]){
     return 0;
 }
 
+// sets the turn of the player
 void setTurn(char field[3][3], char input[2], char player){
     int number = (int)input[1] - '0';
     switch (input[0]){

@@ -1,3 +1,6 @@
+// Autor: Niklas Fulle
+
+// prints the field
 void printField(char field[3][3]){
     printf("   | 1 | 2 | 3 |\n");
     printf("   |---|---|---|\n");
