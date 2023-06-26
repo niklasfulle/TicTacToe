@@ -35,5 +35,6 @@ int main(int argc, char** argv){
             turn = 0;
         }
     }
+    printField(field);
     return 0;
 }
