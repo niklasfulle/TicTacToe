@@ -1,8 +1,6 @@
 // Autor: Niklas Fulle
 
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 #include "utils.c"
 #include "print.c"
 
