@@ -14,8 +14,6 @@ Player1: X | Payer2: O<br>
 ## Header Datein
 
 1. stdio.h
-2. stdlib.h
-3. string.h
 
 ## Build
 
