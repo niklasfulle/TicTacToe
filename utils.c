@@ -4,7 +4,7 @@
 int checkHorizontal(char field[3][3]){
     for(int i = 0; i < 3; i++){
         if(field[i][0] == field[i][1] && field[i][1] == field[i][2] && field[i][0] != ' '){
-            return 1;
+            return 1 + i;
         }
     }
     return 0;
@@ -14,7 +14,7 @@ int checkHorizontal(char field[3][3]){
 int checkVertical(char field[3][3]){
     for(int i = 0; i < 3; i++){
         if(field[0][i] == field[1][i] && field[1][i] == field[2][i] && field[0][i] != ' '){
-            return 1;
+            return 1 + i;
         }
     }
     return 0;
@@ -26,7 +26,7 @@ int checkDiagonal(char field[3][3]){
         return 1;
     }
     if(field[0][2] == field[1][1] && field[1][1] == field[2][0] && field[0][2] != ' '){
-        return 1;
+        return 2;
     }
     return 0;
 }
@@ -39,7 +39,7 @@ int checkWinner(char field[3][3], int turn){
     int vertical = checkVertical(field);
     // Check for diagonal win
     int diagonal = checkDiagonal(field);
-    if(horizontal == 1 || vertical == 1 || diagonal == 1){
+    if(horizontal > 0 || vertical > 0 || diagonal > 0){
         if(turn == 1){
             printf("Winner: Player 1\n");
         }else{

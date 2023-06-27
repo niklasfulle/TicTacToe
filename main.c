@@ -35,6 +35,6 @@ int main(int argc, char** argv){
             turn = 0;
         }
     }
-    printField(field);
+    printWinnerField(field);
     return 0;
 }
