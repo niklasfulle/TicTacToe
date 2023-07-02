@@ -1,15 +1,15 @@
 # TicTacToe
 
-## Übersicht
+## Overview
 
--   [Beschreibung](#beschreibung)
+-   [Description](#description)
 -   [View](#view)
--   [Header Datein](#header-datein)
+-   [Header Files](#header-files)
 -   [Build](#build)
 
-## Beschreibung
+## Description
 
-Das Spiel TicTacToe in der Konsole<br>
+The game Tic Tac Toe in the console to learn some C<br>
 Player1: X | Payer2: O<br>
 
 ## View
@@ -71,16 +71,16 @@ Winner: Player 1
    |---|---|---|
 ```
 
-## Header Datein
+## Header Files
 
 1. stdio.h
 
 ## Build
 
-1. Clone das Repository
-2. Öffne die Konsole im Ordner TicTacToe
-3. Führe den Befehl aus:
+1. Clone the repository
+2. Open the console in the folder TicTacToe
+3. Run the command:
     ```bash
     gcc main.c -o TicTacToe && TicTacToe
     ```
-4. Fertig
+4. Done
